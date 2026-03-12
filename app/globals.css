@@ -1,26 +1,25 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
+@import 'tailwindcss';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --color-bg: #050505; --color-red: #ff2d2d; --color-red-dim: #cc2222;
+  --color-muted: #5a4444; --color-text: #b08888; --color-surface: #0c0808; --color-border: rgba(255,45,45,0.08);
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { background: var(--color-bg); color: var(--color-text); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  ::selection { background: rgba(255,45,45,0.3); color: #fff; }
 }
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+/* Crack effect */
+.crack { position: relative; }
+.crack::after { content: ''; position: absolute; top: 0; right: -10px; width: 40px; height: 100%; background: linear-gradient(135deg, transparent 40%, var(--color-red) 40.5%, var(--color-red) 41%, transparent 41.5%); opacity: 0.08; pointer-events: none; }
+/* Glitch text */
+@keyframes glitchText { 0%,95%,100% { transform: none; opacity: 1; } 96% { transform: translateX(-3px) skewX(-2deg); opacity: 0.8; } 98% { transform: translateX(3px) skewX(2deg); opacity: 0.9; } }
+.glitch-text { animation: glitchText 5s ease-in-out infinite; }
+/* Smash card */
+.smash-card { background: var(--color-surface); border: 1px solid var(--color-border); padding: 1.2rem; border-radius: 4px; transition: all 0.3s; }
+.smash-card:hover { border-color: rgba(255,45,45,0.25); transform: rotate(-0.5deg); }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.anim-up { animation: fadeUp 0.8s ease-out both; }
+.d1 { animation-delay: 0.1s; } .d2 { animation-delay: 0.2s; } .d3 { animation-delay: 0.35s; }
+::-webkit-scrollbar { width: 3px; } ::-webkit-scrollbar-track { background: var(--color-bg); } ::-webkit-scrollbar-thumb { background: rgba(255,45,45,0.2); }
