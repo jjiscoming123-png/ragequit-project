@@ -15,7 +15,7 @@ export default function Page() {
     <>
       <nav className="fixed top-0 inset-x-0 z-50 bg-[var(--color-bg)]/80 backdrop-blur-sm border-b border-[var(--color-border)] px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-2"><Logo size={22} /><span className="text-[11px] font-black text-[var(--color-red)]/60 tracking-wider">RAGEQUIT</span></div>
-        <a href="https://x.com/RagequitCoin" target="_blank" rel="noopener noreferrer" className="text-[11px] font-bold text-white bg-[var(--color-red)] px-4 py-1.5 rounded hover:bg-[var(--color-red-dim)] transition-colors">
+        <a href="https://x.com/ragequit2024" target="_blank" rel="noopener noreferrer" className="text-[11px] font-bold text-white bg-[var(--color-red)] px-4 py-1.5 rounded hover:bg-[var(--color-red-dim)] transition-colors">
           Flip the Table
         </a>
       </nav>
@@ -76,7 +76,7 @@ export default function Page() {
         <p className="text-sm text-[var(--color-muted)] mb-8 max-w-sm mx-auto">
           You don&apos;t owe them your liquidity, your attention, or your belief.
         </p>
-        <a href="https://x.com/RagequitCoin" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm font-bold text-white bg-[var(--color-red)] px-6 py-3 rounded hover:bg-[var(--color-red-dim)] transition-colors">
+        <a href="https://x.com/ragequit2024" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm font-bold text-white bg-[var(--color-red)] px-6 py-3 rounded hover:bg-[var(--color-red-dim)] transition-colors">
           <span>𝕏</span> Flip the Table
         </a>
       </section>
